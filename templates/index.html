@@ -31,6 +31,10 @@
     <script id="app-config" type="application/json">
         {{ CONFIG | tojson | safe }}
     </script>
+     <!-- Trains Data with App Version -->
+    <script id="trains-data" type="application/json">
+        {"trains": {{ trains | tojson | safe }}, "version": "{{ app_version }}"}
+    </script>
 </head>
 
 <body>
@@ -93,7 +97,9 @@
             </div>
         </form>
         <footer class="new-footer">
-           
+            <p>This project is open source. Check it out on <a
+                    href="https://github.com/nishatrhythm/Bangladesh-Railway-Train-Seat-Matrix-Web-Application"
+                    target="_blank">GitHub</a>.</p>
         </footer>
 
         <div class="footer-links">
